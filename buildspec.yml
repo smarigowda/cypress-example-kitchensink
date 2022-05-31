@@ -11,7 +11,6 @@ batch:
       env:
         variables:
           IMAGE: public.ecr.aws/cypress-io/cypress/browsers:node12.14.1-chrome85-ff81
-
 phases:
   install:
     runtime-versions:
