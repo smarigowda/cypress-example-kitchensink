@@ -46,4 +46,4 @@ phases:
     # e.g. awsCodeBuild-cypress-kitchen-sink/AWSCodeBuild-a14fc8e3-b5d6-42f9-9067-345d48a8f0fd
     commands:
         - npm run start &
-        - npx cypress run --ci-build-id $CODEBUILD_INITIATOR
+        - npx cypress run
