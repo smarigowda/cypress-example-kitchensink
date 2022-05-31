@@ -32,5 +32,5 @@ phases:
       - npm run cy:info
   build:
     commands:
-      - npm run start:ci &
+      - npm run start &
       - npx cypress run --browser firefox
