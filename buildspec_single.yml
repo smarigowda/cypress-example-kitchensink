@@ -23,7 +23,7 @@ build-matrix:
 reports:
   cypress-reports:
     files:
-      - "combined.xml"
+      - "combined-report.xml"
     file-format: "JUNITXML"
 phases:
   install:
