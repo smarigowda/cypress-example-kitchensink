@@ -50,5 +50,6 @@ phases:
     # e.g. awsCodeBuild-cypress-kitchen-sink/AWSCodeBuild-a14fc8e3-b5d6-42f9-9067-345d48a8f0fd
     commands:
         - npm run start &
-        - npx cypress run --browser firefox --reporter junit --reporter-options mochaFile=results.xml,toConsole=true
-        - npm run merge-reports
+        - npm run delete:reports
+        - npx cypress run --browser firefox --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json
+        - npm run combine:reports
