@@ -38,7 +38,7 @@
     "cy:run": "cypress run",
     "cy:run:record": "cypress run --record",
     "cy:open": "cypress open",
-    "merge-reports": "jrm combined.xml \"results/*.xml\"",
+    "merge-reports": "jrm combined.xml \"*.xml\"",
     "local:open": "start-test 8080 cy:open",
     "local:run": "start-test 8080 cy:run",
     "local:run:record": "start-test 8080 cy:run:record",
