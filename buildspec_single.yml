@@ -20,7 +20,11 @@ build-matrix:
         # Optional: Use Custom Public ECR Image as container
         #image:
         #  - public.ecr.aws/your-namespace/image-name
-
+reports:
+  cypress-reports:
+    files:
+      - "results.xml"
+    file-format: "JUNITXML"
 phases:
   install:
     runtime-versions:
@@ -46,4 +50,4 @@ phases:
     # e.g. awsCodeBuild-cypress-kitchen-sink/AWSCodeBuild-a14fc8e3-b5d6-42f9-9067-345d48a8f0fd
     commands:
         - npm run start &
-        - npx cypress run --browser firefox --reporter junit --reporter-options mochaFile=result.xml,toConsole=true
+        - npx cypress run --browser firefox --reporter junit --reporter-options mochaFile=results.xml,toConsole=true
