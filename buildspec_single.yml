@@ -23,7 +23,7 @@ build-matrix:
 reports:
   cypress-reports:
     files:
-      - "results.xml"
+      - "combined.xml"
     file-format: "JUNITXML"
 phases:
   install:
@@ -51,3 +51,4 @@ phases:
     commands:
         - npm run start &
         - npx cypress run --browser firefox --reporter junit --reporter-options mochaFile=results.xml,toConsole=true
+        - npm run merge-reports
